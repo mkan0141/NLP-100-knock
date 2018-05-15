@@ -1,8 +1,5 @@
 def n_gram(sentence, n):
-    s_list = []
-    for i in range(len(sentence) - 1):
-        s_list.append(sentence[i] + sentence[i+1])
-    return s_list
+    return [sentence[i:i+n] for i in range(len(sentence) - n + 1)]
 
 sentence = "I am an NLPer"
 
