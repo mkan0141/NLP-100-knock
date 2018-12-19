@@ -1,10 +1,10 @@
 import json
 
-data =open('jawiki-country.json', 'r')
-text = data.readlines()
+def select_title(word):
+    data =open('jawiki-country.json', 'r').readlines()
+    return [json.loads(line) for line in data if json.loads(line)['title'] == word]
 
-for a in text:
-    if json.loads(a)['title'] == 'イギリス':
-        print(json.loads(a)['text'])
+data = select_title('イギリス')
 
-
+for d in data:
+    print(d, end='')

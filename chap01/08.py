@@ -1,7 +1,7 @@
 def cipher(sentence):
     ret = ""
     for c in sentence:
-        if c.islower:
+        if c.islower():
             ret += chr(219 - ord(c))
         else:
             ret += c
